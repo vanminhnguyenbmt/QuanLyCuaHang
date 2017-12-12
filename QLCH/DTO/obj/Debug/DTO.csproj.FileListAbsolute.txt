@@ -1,0 +1,5 @@
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\DTO\bin\Debug\DTO.dll
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\DTO\bin\Debug\DTO.pdb
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\DTO\obj\Debug\DTO.dll
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\DTO\obj\Debug\DTO.pdb

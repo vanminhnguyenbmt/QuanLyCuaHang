@@ -1,0 +1,9 @@
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\BUS\bin\Debug\BUS.dll
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\BUS\bin\Debug\BUS.pdb
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\BUS\bin\Debug\DAO.dll
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\BUS\bin\Debug\DTO.dll
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\BUS\bin\Debug\DAO.pdb
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\BUS\bin\Debug\DTO.pdb
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\BUS\obj\Debug\BUS.dll
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\BUS\obj\Debug\BUS.pdb

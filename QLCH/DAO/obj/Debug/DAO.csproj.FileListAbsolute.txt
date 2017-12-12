@@ -1,0 +1,7 @@
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\DAO\bin\Debug\DAO.dll
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\DAO\bin\Debug\DAO.pdb
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\DAO\bin\Debug\DTO.dll
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\DAO\bin\Debug\DTO.pdb
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\DAO\obj\Debug\DAO.dll
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\DAO\obj\Debug\DAO.pdb

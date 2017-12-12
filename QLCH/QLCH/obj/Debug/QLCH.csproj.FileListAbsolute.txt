@@ -1,0 +1,13 @@
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\bin\Debug\QLCH.exe.config
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\bin\Debug\QLCH.exe
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\bin\Debug\QLCH.pdb
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\bin\Debug\BUS.dll
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\bin\Debug\DTO.dll
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\bin\Debug\BUS.pdb
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\bin\Debug\DTO.pdb
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\obj\Debug\QLCH.csprojResolveAssemblyReference.cache
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\obj\Debug\QLCH.frmMain.resources
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\obj\Debug\QLCH.Properties.Resources.resources
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\obj\Debug\QLCH.csproj.GenerateResource.Cache
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\obj\Debug\QLCH.exe
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\obj\Debug\QLCH.pdb
