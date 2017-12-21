@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using BUS;
 
 namespace QLCH
 {
@@ -39,7 +41,13 @@ namespace QLCH
 
         private void QLSP_Load(object sender, EventArgs e)
         {
-
+            LoadDgvSanPham();
+        }
+        private void LoadDgvSanPham()
+        {
+            List<Sanpham_DTO> lstSanpham = Sanpham_BUS.LoadSanpham();
+            
+            dgvdmsp.DataSource   = lstSanpham;
         }
 
        
