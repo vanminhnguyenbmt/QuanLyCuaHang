@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQLHDNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLHDNhap.Designer.cs">
+      <DependentUpon>frmQLHDNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQLNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,12 +71,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLLKMTDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="QLSP.cs" />
+    <Compile Include="QLSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="QLSP.Designer.cs">
       <DependentUpon>QLSP.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLHDNhap.resx">
+      <DependentUpon>frmQLHDNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLNV.resx">
       <DependentUpon>frmQLNV.cs</DependentUpon>

@@ -13,3 +13,8 @@ C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\DTO\bin\Debug\DTO.pdb
 C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\DTO\obj\Debug\DTO.dll
 C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\DTO\obj\Debug\DTO.pdb
+E:\Documents\GitHub\QuanLyCuaHang\QLCH\DTO\bin\Debug\DTO.dll
+E:\Documents\GitHub\QuanLyCuaHang\QLCH\DTO\bin\Debug\DTO.pdb
+E:\Documents\GitHub\QuanLyCuaHang\QLCH\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+E:\Documents\GitHub\QuanLyCuaHang\QLCH\DTO\obj\Debug\DTO.dll
+E:\Documents\GitHub\QuanLyCuaHang\QLCH\DTO\obj\Debug\DTO.pdb

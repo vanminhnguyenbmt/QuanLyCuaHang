@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="HDNhaphang_DTO.cs" />
     <Compile Include="Hoadonban_DTO.cs" />
     <Compile Include="Nhanvien_DTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
