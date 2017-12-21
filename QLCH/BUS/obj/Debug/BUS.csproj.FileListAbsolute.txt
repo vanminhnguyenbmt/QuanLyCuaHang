@@ -7,3 +7,12 @@ D:\Bin.UIT\visual studio 2015\Projects\QLCH\BUS\bin\Debug\DTO.pdb
 D:\Bin.UIT\visual studio 2015\Projects\QLCH\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 D:\Bin.UIT\visual studio 2015\Projects\QLCH\BUS\obj\Debug\BUS.dll
 D:\Bin.UIT\visual studio 2015\Projects\QLCH\BUS\obj\Debug\BUS.pdb
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\BUS\bin\Debug\BUS.dll
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\BUS\bin\Debug\BUS.pdb
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\BUS\bin\Debug\DAO.dll
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\BUS\bin\Debug\DTO.dll
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\BUS\bin\Debug\DAO.pdb
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\BUS\bin\Debug\DTO.pdb
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\BUS\obj\Debug\BUS.dll
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\BUS\obj\Debug\BUS.pdb
