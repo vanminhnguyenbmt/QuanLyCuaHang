@@ -43,6 +43,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Nhanvien_BUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sanpham_BUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">
