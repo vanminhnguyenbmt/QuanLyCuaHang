@@ -1,0 +1,32 @@
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\bin\Debug\QLCH.exe.config
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\bin\Debug\QLCH.exe
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\bin\Debug\QLCH.pdb
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\bin\Debug\BUS.dll
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\bin\Debug\DTO.dll
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\bin\Debug\BUS.pdb
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\bin\Debug\DTO.pdb
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\obj\Debug\QLCH.csprojResolveAssemblyReference.cache
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\obj\Debug\QLCH.frmMain.resources
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\obj\Debug\QLCH.Properties.Resources.resources
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\obj\Debug\QLCH.csproj.GenerateResource.Cache
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\obj\Debug\QLCH.exe
+D:\Bin.UIT\visual studio 2015\Projects\QLCH\QLCH\obj\Debug\QLCH.pdb
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\bin\Debug\QLCH.exe.config
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.exe
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.pdb
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\bin\Debug\QLCH.exe
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\bin\Debug\QLCH.pdb
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\bin\Debug\BUS.dll
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\bin\Debug\DTO.dll
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\bin\Debug\BUS.pdb
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\bin\Debug\DTO.pdb
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.csprojResolveAssemblyReference.cache
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.frmMain.resources
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.Properties.Resources.resources
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.csproj.GenerateResource.Cache
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.frmQLNV.resources
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\bin\Debug\DAO.dll
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\bin\Debug\DAO.pdb
+C:\Users\Thien\Desktop\QuanLyCuaHang\QLCH\QLCH\bin\Debug\QLCH.exe.config
+C:\Users\Thien\Desktop\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.exe
+C:\Users\Thien\Desktop\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.pdb
