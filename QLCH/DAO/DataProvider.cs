@@ -14,7 +14,7 @@ namespace DAO
 
         public static SqlConnection Ketnoi()
         {
-            string sChuoiketnoi = @"Data Source=DESKTOP-JCFB32G\SQLEXPRESS;Initial Catalog=QLLKMT;Integrated Security=True";
+            string sChuoiketnoi = @"Data Source=THIEN-PC;Initial Catalog=QLLKMT;Integrated Security=True";
             SqlConnection con = new SqlConnection(sChuoiketnoi);
             con.Open();
             return con;
