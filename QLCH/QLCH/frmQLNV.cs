@@ -37,8 +37,8 @@ namespace QLCH
 
         private void LoadDgvNhanvien()
         {
-            List<Nhanvien_DTO> lstNhanvien = Nhanvien_BUS.LoadNhanvien();
-            dgvLoadNV.DataSource = lstNhanvien;
+            DataTable tblNhanvien = Nhanvien_BUS.LoadNhanvien();
+            dgvLoadNV.DataSource = tblNhanvien;
         }
     }
 }
