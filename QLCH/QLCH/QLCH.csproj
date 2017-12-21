@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQLHDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLHDB.Designer.cs">
+      <DependentUpon>frmQLHDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQLNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLHDB.resx">
+      <DependentUpon>frmQLHDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLNV.resx">
       <DependentUpon>frmQLNV.cs</DependentUpon>
