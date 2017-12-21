@@ -36,6 +36,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button18 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button17 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -132,6 +132,15 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Danh Mục";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(382, 3);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(70, 70);
+            this.button18.TabIndex = 6;
+            this.button18.Text = "Danh Mục Loại Sản Phẩm";
+            this.button18.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
@@ -289,15 +298,6 @@
             this.button16.Text = "Giới Thiệu";
             this.button16.UseVisualStyleBackColor = true;
             // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(382, 3);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(70, 70);
-            this.button18.TabIndex = 6;
-            this.button18.Text = "Danh Mục Loại Sản Phẩm";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,6 +306,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "frmMain";
             this.Text = "Quản Lý Cửa Hàng Bán Máy Tính Và Linh Kiện Máy Tính";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);

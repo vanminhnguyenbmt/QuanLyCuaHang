@@ -35,5 +35,10 @@ namespace QLCH
         private void button9_Click(object sender, EventArgs e)
         {
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
