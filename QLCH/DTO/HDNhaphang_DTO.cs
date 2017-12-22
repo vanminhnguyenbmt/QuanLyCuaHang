@@ -42,5 +42,17 @@ namespace DTO
           get { return fTongTien; }
           set { fTongTien = value; }
       }
+      private string sTenNV;
+      public string STenNV
+      {
+          get { return sTenNV; }
+          set { sTenNV = value; }
+      }
+      private string sTenNCC;
+      public string STenNCC
+      {
+          get { return sTenNCC; }
+          set { sTenNCC = value; }
+      }
     }
 }

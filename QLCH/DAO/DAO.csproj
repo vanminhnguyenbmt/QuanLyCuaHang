@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CTHDNhap_DAO.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="HDNhaphang_DAO.cs" />
     <Compile Include="Nhanvien_DAO.cs" />

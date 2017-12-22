@@ -65,3 +65,4 @@ E:\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.frmQLNV.resources
 E:\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.Properties.Resources.resources
 E:\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.QLSP.resources
 E:\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.csproj.GenerateResource.Cache
+E:\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.frmCTHDNhap.resources

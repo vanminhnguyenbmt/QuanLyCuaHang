@@ -8,7 +8,7 @@ using System.Data;
 
 namespace DAO
 {
-    class DataProvider
+   public class DataProvider
     {
         //ket noi
 
@@ -28,11 +28,21 @@ namespace DAO
         }
 
         // lay du lieu
-        public static DataTable LayDataTable(string sTruyvan, SqlConnection con)
+        public static DataTable GetDataTable(String nameproc, SqlConnection con)
         {
-            SqlDataAdapter da = new SqlDataAdapter(sTruyvan, con);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+            var cmd = new SqlCommand(nameproc, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            var dap = new SqlDataAdapter(cmd);
+            var dt = new DataTable();
+            dap.Fill(dt);
+            return dt;
+        }
+        public static DataTable GetDataTableWithParam(SqlCommand cmd, SqlConnection con)
+        {
+            cmd.CommandType = CommandType.StoredProcedure;
+            var dap = new SqlDataAdapter(cmd);
+            var dt = new DataTable();
+            dap.Fill(dt);
             return dt;
         }
         

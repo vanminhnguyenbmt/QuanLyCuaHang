@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using System.Data.SqlClient;
+using System.Data.Sql;
 using System.Data;
 
 namespace DAO
@@ -16,9 +17,8 @@ namespace DAO
        public static List<HDNhaphang_DTO> LoadHDNhap()
        {
         //Khai bao truy cap SQL
-           string sTruyvan = "select * from HDNHAPHANG";
-           con = DataProvider.Ketnoi();
-           DataTable dt = DataProvider.LayDataTable(sTruyvan, con);
+                   con = DataProvider.Ketnoi();
+                   DataTable dt = DataProvider.GetDataTable("HoaDonNhap_Load", con);
            if(dt.Rows.Count == 0)
            {
                return null;
@@ -30,11 +30,16 @@ namespace DAO
                HDNhaphang_DTO hdn = new HDNhaphang_DTO();
                hdn.SMaHDN = dt.Rows[i]["MAHDNH"].ToString();
                hdn.SMaNV = dt.Rows[i]["MANV"].ToString();
+               hdn.STenNV = dt.Rows[i]["TENNV"].ToString();
                hdn.SMaNCC = dt.Rows[i]["MANCC"].ToString();
+               hdn.STenNCC = dt.Rows[i]["TENNCC"].ToString();
                hdn.DtNgayNhap = DateTime.Parse(dt.Rows[i]["NGAYNH"].ToString());
                hdn.FTongTien = float.Parse(dt.Rows[i]["TONGTIEN"].ToString());
+              
+              
                lsthdn.Add(hdn);
            }
+           DataProvider.Dongketnoi(con);
            return lsthdn;
        }
     }

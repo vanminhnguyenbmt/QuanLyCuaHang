@@ -18,7 +18,7 @@ namespace DAO
         {
             string sTruyvan = "select * from NHANVIEN";
             con = DataProvider.Ketnoi();
-            DataTable dt = DataProvider.LayDataTable(sTruyvan, con);
+            DataTable dt = DataProvider.GetDataTable(sTruyvan, con);
             if(dt.Rows.Count==0)
             {
                 return null;
