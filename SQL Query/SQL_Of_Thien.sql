@@ -53,3 +53,16 @@ BEGIN
 		MALOAI = @MANV
 	WHERE MANV = @MANV
 END
+
+--- Tìm kiếm nhân viên theo tên hoặc theo số điện thoại
+GO
+CREATE PROC NhanVien_Search(
+	@TENNV NVARCHAR(50),
+	@SDT VARCHAR(11)
+)
+AS
+BEGIN
+	SELECT * 
+	FROM NHANVIEN
+	WHERE TENNV LIKE N'%' +@TENNV+ '%' OR TENNV LIKE '%' +@SDT+ '%'
+END
