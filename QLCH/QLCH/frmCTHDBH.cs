@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace QLCH
 {
-    public partial class frmQLHDB : Form
+    public partial class frmCTHDBH : Form
     {
-        public frmQLHDB()
+        public frmCTHDBH()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmCTHDBH_Load(object sender, EventArgs e)
         {
 
         }

@@ -7,46 +7,22 @@ using DTO;
 using System.Data.SqlClient;
 using System.Data;
 
-
 namespace DAO
 {
-    public class Nhanvien_DAO
+    public class HoadonBan_DAO
     {
         static SqlConnection con;
         //load nhan vien
-        public static List<Nhanvien_DTO> LoadNhanVien()
+        public static DataTable LoadTop1HDB()
         {
-            string sTruyvan = "select * from NHANVIEN";
             con = DataProvider.Ketnoi();
-<<<<<<< HEAD
-            DataTable dt = DataProvider.LayDataTable(sTruyvan, con);
-            if(dt.Rows.Count==0)
-            {
-                return null;
-            }
-            List<Nhanvien_DTO> listnv = new List<Nhanvien_DTO>();
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                Nhanvien_DTO nv = new Nhanvien_DTO();
-                nv.SMaNV = dt.Rows[i]["MANV"].ToString();
-                nv.STenNV = dt.Rows[i]["TENNV"].ToString();
-                nv.DTNgaysinh = DateTime.Parse(dt.Rows[i]["NGSINH"].ToString());
-                nv.IGioitinh = Int32.Parse(dt.Rows[i]["GIOITINH"].ToString());
-                nv.SDiachi = dt.Rows[i]["DIACHI"].ToString();
-                nv.SSDT = dt.Rows[i]["SDT"].ToString();
-                nv.SMaLoai = dt.Rows[i]["MALOAI"].ToString();
-                listnv.Add(nv);
-            }
-            return listnv;
-=======
-            var cmd = new SqlCommand("Nhanvien_Load", con);
+            var cmd = new SqlCommand("HDBanHang_Load", con);
             cmd.CommandType = CommandType.StoredProcedure;
             var Adapter = new SqlDataAdapter(cmd);
             var table = new DataTable();
             Adapter.Fill(table);
             DataProvider.Dongketnoi(con);
             return table;
->>>>>>> Thien_conflict
         }
         //load ten nv
         public static DataTable LoadTenNhanVien()
@@ -125,24 +101,9 @@ namespace DAO
             var Adapter = new SqlDataAdapter(cmd);
             var table = new DataTable();
             Adapter.Fill(table);
-            DataProvider.Dongketnoi(con);    
-            DataProvider.Dongketnoi(con);
-            return table;
-        }
-
-        public static DataTable LoadMaNV(string sTenNV)
-        {
-            con = DataProvider.Ketnoi();
-            var cmd = new SqlCommand("sp_timkiem", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@name", SqlDbType.Char).Value = sTenNV;
-            var Adapter = new SqlDataAdapter(cmd);
-            var table = new DataTable();
-            Adapter.Fill(table);
             DataProvider.Dongketnoi(con);
             DataProvider.Dongketnoi(con);
             return table;
         }
-
     }
 }

@@ -19,6 +19,7 @@ namespace QLCH
         public frmMain()
         {
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,6 +39,8 @@ namespace QLCH
 
         private void button9_Click(object sender, EventArgs e)
         {
+            frmQLBH frmQLHDB = new frmQLBH();
+            frmQLHDB.Show();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -45,6 +48,7 @@ namespace QLCH
 
         }
 
+<<<<<<< HEAD
         private void button12_Click(object sender, EventArgs e)
         {
             QLSP f = new QLSP();
@@ -61,6 +65,17 @@ namespace QLCH
         {
             QLNCC qlncc = new QLNCC();
             qlncc.Show();
+=======
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            frmQLNV frm = new frmQLNV();
+            frm.Show();
+>>>>>>> Thien_conflict
         }
     }
 }
