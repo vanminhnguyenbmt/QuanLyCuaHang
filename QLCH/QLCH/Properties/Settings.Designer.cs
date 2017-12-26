@@ -32,5 +32,16 @@ namespace QLCH.Properties {
                 return ((string)(this["QLLKMTConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-JCFB32G\\SQLEXPRESS;Initial Catalog=QLLKMT;Integrated Security" +
+            "=True")]
+        public string QLLKMTConnectionMASP {
+            get {
+                return ((string)(this["QLLKMTConnectionMASP"]));
+            }
+        }
     }
 }

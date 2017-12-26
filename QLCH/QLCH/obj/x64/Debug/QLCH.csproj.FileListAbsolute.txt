@@ -1,0 +1,17 @@
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\bin\x64\Debug\QLCH.exe.config
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\bin\x64\Debug\QLCH.exe
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\bin\x64\Debug\QLCH.pdb
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\bin\x64\Debug\BUS.dll
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\bin\x64\Debug\DTO.dll
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\bin\x64\Debug\DAO.dll
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\bin\x64\Debug\BUS.pdb
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\bin\x64\Debug\DTO.pdb
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\bin\x64\Debug\DAO.pdb
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\x64\Debug\QLCH.csprojResolveAssemblyReference.cache
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\x64\Debug\QLCH.frmMain.resources
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\x64\Debug\QLCH.frmQLNV.resources
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\x64\Debug\QLCH.Properties.Resources.resources
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\x64\Debug\QLCH.QLSP.resources
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\x64\Debug\QLCH.csproj.GenerateResource.Cache
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\x64\Debug\QLCH.exe
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\x64\Debug\QLCH.pdb

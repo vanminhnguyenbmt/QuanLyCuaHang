@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+
+
+
 
 namespace QLCH
 {
@@ -39,6 +43,24 @@ namespace QLCH
         private void frmMain_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            QLSP f = new QLSP();
+            f.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DMSP dmsp = new DMSP();
+            dmsp.Show();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            QLNCC qlncc = new QLNCC();
+            qlncc.Show();
         }
     }
 }

@@ -1,0 +1,7 @@
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\DAO\bin\x64\Debug\DAO.dll
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\DAO\bin\x64\Debug\DAO.pdb
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\DAO\bin\x64\Debug\DTO.dll
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\DAO\bin\x64\Debug\DTO.pdb
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\DAO\obj\x64\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\DAO\obj\x64\Debug\DAO.dll
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\DAO\obj\x64\Debug\DAO.pdb
