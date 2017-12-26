@@ -1,0 +1,4 @@
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\DTO\bin\x64\Debug\DTO.dll
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\DTO\bin\x64\Debug\DTO.pdb
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\DTO\obj\x64\Debug\DTO.dll
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\DTO\obj\x64\Debug\DTO.pdb

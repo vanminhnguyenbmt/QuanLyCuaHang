@@ -22,20 +22,24 @@ namespace DTO
             get { return sTenSP; }
             set { sTenSP = value; }
         }
-        private string sTGBH;
+        private int sTGBH;
 
-        public string STGBH
+        public int STGBH
         {
             get { return sTGBH; }
             set { sTGBH = value; }
         }
-        private string sSoLuong;
 
-        public string SSoLuong
+
+        private int sSoLuong;
+
+        public int SSoLuong
         {
             get { return sSoLuong; }
             set { sSoLuong = value; }
         }
+
+        
         private string sTrangThai;
 
         public string STrangThai
@@ -43,13 +47,17 @@ namespace DTO
             get { return sTrangThai; }
             set { sTrangThai = value; }
         }
-        private string sDonGia;
+        private int sDonGia;
 
-        public string SDonGia
+        public int SDonGia
         {
             get { return sDonGia; }
             set { sDonGia = value; }
         }
+
+       
+        
+        
         private string sMaLoai;
 
         public string SMaLoai

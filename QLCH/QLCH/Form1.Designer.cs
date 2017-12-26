@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
@@ -53,17 +51,13 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button17 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // tabControl1
             // 
@@ -168,6 +162,7 @@
             this.button6.TabIndex = 3;
             this.button6.Text = "Danh Mục Sản Phẩm";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -239,6 +234,7 @@
             this.button12.TabIndex = 5;
             this.button12.Text = "Quản Lý Sản Phẩm";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -248,6 +244,7 @@
             this.button11.TabIndex = 4;
             this.button11.Text = "Quản Lý Nhà Cung Cấp";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -298,11 +295,19 @@
             this.button16.Text = "Giới Thiệu";
             this.button16.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(1, 111);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(780, 360);
+            this.panel1.TabIndex = 4;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmMain";
             this.Text = "Quản Lý Cửa Hàng Bán Máy Tính Và Linh Kiện Máy Tính";
@@ -317,7 +322,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button3;
@@ -341,6 +346,7 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

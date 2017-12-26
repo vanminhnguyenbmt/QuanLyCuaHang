@@ -1,0 +1,9 @@
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\BUS\bin\x64\Debug\BUS.dll
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\BUS\bin\x64\Debug\BUS.pdb
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\BUS\bin\x64\Debug\DAO.dll
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\BUS\bin\x64\Debug\DTO.dll
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\BUS\bin\x64\Debug\DAO.pdb
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\BUS\bin\x64\Debug\DTO.pdb
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\BUS\obj\x64\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\BUS\obj\x64\Debug\BUS.dll
+C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\BUS\obj\x64\Debug\BUS.pdb
