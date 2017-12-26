@@ -24,6 +24,15 @@ namespace QLCH
         private void QLNCC_Load(object sender, EventArgs e)
         {
             LoadDgvNhacungcap();
+            try
+            {
+                Nhacungcap_BUS x = new Nhacungcap_BUS();
+                txtmancc.Text = x.XuLyMaNCC();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void LoadDgvNhacungcap()
@@ -31,6 +40,16 @@ namespace QLCH
             List<Nhacungcap_DTO> lstncc = Nhacungcap_BUS.LoadNhacungcap();
 
             dgvncc.DataSource = lstncc;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

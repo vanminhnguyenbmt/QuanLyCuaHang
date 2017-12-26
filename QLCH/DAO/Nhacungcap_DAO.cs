@@ -34,5 +34,20 @@ namespace DAO
             }
             return listncc;
         }
+
+        public static String MaNCCTutang()
+        {
+
+            Nhacungcap_DTO TGBH = new Nhacungcap_DTO();
+            con = DataProvider.Ketnoi();
+            var cmd = new SqlCommand("NhaCungCap_TOP", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            var Adapter = new SqlDataAdapter(cmd);
+            var table = new DataTable();
+            Adapter.Fill(table);
+            string sMaNCC = table.Rows[0]["MANCC"].ToString();
+            DataProvider.Dongketnoi(con);
+            return sMaNCC;
+        }
     }
 }
