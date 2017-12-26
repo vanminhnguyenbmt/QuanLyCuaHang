@@ -47,5 +47,9 @@ C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.frmQLNV.r
 C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.Properties.Resources.resources
 C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.csproj.GenerateResource.Cache
 C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.QLSP.resources
+<<<<<<< HEAD
 C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.DMSP.resources
 C:\Users\Tkong\Documents\GitHub\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.QLNCC.resources
+=======
+C:\Users\Thien\Desktop\Github\QuanLyCuaHang\QLCH\QLCH\obj\Debug\QLCH.QLSP.resources
+>>>>>>> master
