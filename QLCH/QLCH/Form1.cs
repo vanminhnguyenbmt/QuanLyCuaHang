@@ -35,7 +35,7 @@ namespace QLCH
 
         private void button9_Click(object sender, EventArgs e)
         {
-            frmQLHDB frmQLHDB = new frmQLHDB();
+            frmQLBH frmQLHDB = new frmQLBH();
             frmQLHDB.Show();
         }
 
