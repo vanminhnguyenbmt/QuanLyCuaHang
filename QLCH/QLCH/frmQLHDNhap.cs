@@ -19,7 +19,8 @@ namespace QLCH
     {
 
         
-
+        List<string> manv = new List<string>();
+        List<string> mancc = new List<string>();
         public frmQLHDNhap()
         {
             InitializeComponent();
@@ -49,41 +50,51 @@ namespace QLCH
         {
             
         }
-        public void AddNVToComBox ()
+        public void AddNVToComBox (ComboBox cb)
         {
+            manv.Clear();
             SqlConnection con = new SqlConnection();
             con = DataProvider.Ketnoi();
             var dt = new DataTable();
             dt = DataProvider.GetDataTable("NhanVien_Select_Element", con);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                cbNV.Items.Add (dt.Rows[i]["TENNV"].ToString());
+                cb.Items.Add (dt.Rows[i]["TENNV"].ToString());
+                manv.Add(dt.Rows[i]["MANV"].ToString());
             }
             DataProvider.Dongketnoi(con);
             
         }
-        public void AddNCCToComBox()
+        public void AddNCCToComBox(ComboBox cb)
         {
+            mancc.Clear();
             SqlConnection con1 = new SqlConnection();
             con1 = DataProvider.Ketnoi();
             var dt = new DataTable();
             dt = DataProvider.GetDataTable("NhaCungCap_Select_Element", con1);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                cbNCC.Items.Add(dt.Rows[i]["TENNCC"].ToString());
+                cb.Items.Add(dt.Rows[i]["TENNCC"].ToString());
+                mancc.Add(dt.Rows[i]["MANCC"].ToString());
             }
             DataProvider.Dongketnoi(con1);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (txMaHD.Text == "")
+            {
+                MessageBox.Show("Bạn phải chọn một dòng trước đã !");
+                return;
+            }
             SqlConnection con;
             con = DataProvider.Ketnoi();
             List<string> MaXoa = new List<string>();
             int i = 0;
+            
             foreach (DataGridViewRow row in dgvHDNhap.SelectedRows)
             {
-                
+                    
                     SqlCommand cmd = new SqlCommand("HoaDonNhap_Delete", con);
                     cmd.Parameters.Add("@MAHDNH", SqlDbType.Char).Value = row.Cells[0].Value.ToString();
                     DataProvider.GetDataTableWithParam(cmd, con);
@@ -98,10 +109,11 @@ namespace QLCH
         {
             cbNCC.Items.Clear();
             cbNV.Items.Clear();
-            AddNVToComBox();
-            AddNCCToComBox();
-            String s = dgvHDNhap[0, e.RowIndex].Value.ToString();
-            txMaHD.Text = s;
+            AddNVToComBox(cbNV);
+            AddNCCToComBox(cbNCC);
+             string str = dgvHDNhap[0, e.RowIndex].Value.ToString();
+             txMaHD.Text = str;
+               
             string nv = dgvHDNhap[5, e.RowIndex].Value.ToString();
             string ncc = dgvHDNhap[6, e.RowIndex].Value.ToString();
             int i = 0;
@@ -121,7 +133,7 @@ namespace QLCH
             dtNgayNhap.Value = new DateTime(dt.Year, dt.Month, dt.Day);
             string t = dgvHDNhap[4, e.RowIndex].Value.ToString();
             txTongTT.Text = t;
-            List<CTHDNhap_DTO> lstCTHDNhap = CTHDNhap_BUS.LoadCTHDNhap(s);
+            List<CTHDNhap_DTO> lstCTHDNhap = CTHDNhap_BUS.LoadCTHDNhap(str);
             dgvCTHDNhap.DataSource = lstCTHDNhap;
             dgvCTHDNhap.Columns["SMaCTHDN"].Visible = false;
             dgvCTHDNhap.Columns["SMaSP"].Visible = false;
@@ -132,6 +144,47 @@ namespace QLCH
                 count += int.Parse(dgvCTHDNhap[4, i].Value.ToString());
             }
             txTongSP.Text = count.ToString();
+        }
+
+        private void btnUpdateHDN_Click(object sender, EventArgs e)
+        {
+            if (txMaHD.Text == "")
+            {
+                MessageBox.Show("Bạn phải chọn một dòng trước đã !");
+                return;
+            }
+            SqlConnection con;
+            con = DataProvider.Ketnoi();
+            SqlCommand cmd = new SqlCommand("HDNhapHang_Update", con);
+                    cmd.Parameters.Add("@MAHDNH", SqlDbType.Char).Value = txMaHD.Text;
+                    cmd.Parameters.Add("@MANV", SqlDbType.Char).Value = manv[cbNV.SelectedIndex];
+                    cmd.Parameters.Add("@MANCC", SqlDbType.Char).Value = mancc[cbNCC.SelectedIndex];
+                   
+                    cmd.Parameters.Add("@TONGTT", SqlDbType.Money).Value = txTongTT.Text;
+                    cmd.Parameters.Add("@NGAYNHAP", SqlDbType.SmallDateTime).Value = dtNgayNhap.Value.ToString();
+                    DataProvider.GetDataTableWithParam(cmd, con);
+                    MessageBox.Show("Xoá dòng có MaHDN=" + txMaHD.Text+ " thành công!");
+                    LoaddgvHDNhap();
+            DataProvider.Dongketnoi(con);
+        }
+
+        private void btnUpdateCTHDN_Click(object sender, EventArgs e)
+        {
+            if (txMaHD.Text == "")
+            {
+                MessageBox.Show("Bạn phải chọn một dòng trước đã !");
+                return;
+            }
+            frmCTHDNhap frm2 = new frmCTHDNhap(txMaHD.Text);
+            frm2.Activate();
+            frm2.Show();
+        }
+
+        private void btnAddHDN_Click(object sender, EventArgs e)
+        {
+            frmCTHDNhap frm2 = new frmCTHDNhap("add");
+            frm2.Activate();
+            frm2.Show();
         }
     }
 }

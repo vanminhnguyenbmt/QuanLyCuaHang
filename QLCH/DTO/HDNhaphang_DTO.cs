@@ -36,11 +36,11 @@ namespace DTO
           set { dtNgayNhap = value; }
       }
 
-      private float fTongTien;
-      public float FTongTien
+      private string fTongTien;
+      public string FTongTien
       {
           get { return fTongTien; }
-          set { fTongTien = value; }
+          set { fTongTien = value.Substring(0,value.Length-5);  }
       }
       private string sTenNV;
       public string STenNV

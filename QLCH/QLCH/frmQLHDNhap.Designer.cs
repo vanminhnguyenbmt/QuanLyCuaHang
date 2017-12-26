@@ -42,11 +42,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txTongTT = new System.Windows.Forms.TextBox();
             this.dgvHDNhap = new System.Windows.Forms.DataGridView();
-            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ngay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NhaCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvCTHDNhap = new System.Windows.Forms.DataGridView();
@@ -58,6 +53,11 @@
             this.btnUpdateHDN = new System.Windows.Forms.Button();
             this.btnUpdateCTHDN = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ngay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NhaCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDNhap)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -196,36 +196,6 @@
             this.dgvHDNhap.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDNhap_CellDoubleClick);
             this.dgvHDNhap.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHDNhap_CellMouseClick);
             // 
-            // MaHD
-            // 
-            this.MaHD.DataPropertyName = "SMaHDN";
-            this.MaHD.HeaderText = "Mã HĐ";
-            this.MaHD.Name = "MaHD";
-            // 
-            // Ngay
-            // 
-            this.Ngay.DataPropertyName = "DtNgayNhap";
-            this.Ngay.HeaderText = "Ngày nhập";
-            this.Ngay.Name = "Ngay";
-            // 
-            // TongTT
-            // 
-            this.TongTT.DataPropertyName = "FTongTien";
-            this.TongTT.HeaderText = "Tổng TT";
-            this.TongTT.Name = "TongTT";
-            // 
-            // NhaCC
-            // 
-            this.NhaCC.DataPropertyName = "STenNCC";
-            this.NhaCC.HeaderText = "Nhà CC";
-            this.NhaCC.Name = "NhaCC";
-            // 
-            // TenNV
-            // 
-            this.TenNV.DataPropertyName = "STenNV";
-            this.TenNV.HeaderText = "NV Nhập";
-            this.TenNV.Name = "TenNV";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvHDNhap);
@@ -300,6 +270,7 @@
             this.btnAddHDN.TabIndex = 17;
             this.btnAddHDN.Text = "Thêm HĐ";
             this.btnAddHDN.UseVisualStyleBackColor = false;
+            this.btnAddHDN.Click += new System.EventHandler(this.btnAddHDN_Click);
             // 
             // btnUpdateHDN
             // 
@@ -310,6 +281,7 @@
             this.btnUpdateHDN.TabIndex = 18;
             this.btnUpdateHDN.Text = "Sửa TT Hoá đơn";
             this.btnUpdateHDN.UseVisualStyleBackColor = false;
+            this.btnUpdateHDN.Click += new System.EventHandler(this.btnUpdateHDN_Click);
             // 
             // btnUpdateCTHDN
             // 
@@ -320,6 +292,7 @@
             this.btnUpdateCTHDN.TabIndex = 19;
             this.btnUpdateCTHDN.Text = "Sửa CT Hoá đơn";
             this.btnUpdateCTHDN.UseVisualStyleBackColor = false;
+            this.btnUpdateCTHDN.Click += new System.EventHandler(this.btnUpdateCTHDN_Click);
             // 
             // button5
             // 
@@ -329,6 +302,38 @@
             this.button5.TabIndex = 20;
             this.button5.Text = "In HĐ";
             this.button5.UseVisualStyleBackColor = true;
+            // 
+            // MaHD
+            // 
+            this.MaHD.DataPropertyName = "SMaHDN";
+            this.MaHD.HeaderText = "Mã HĐ";
+            this.MaHD.Name = "MaHD";
+            // 
+            // Ngay
+            // 
+            this.Ngay.DataPropertyName = "DtNgayNhap";
+            this.Ngay.HeaderText = "Ngày nhập";
+            this.Ngay.Name = "Ngay";
+            // 
+            // TongTT
+            // 
+            this.TongTT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.TongTT.DataPropertyName = "FTongTien";
+            this.TongTT.HeaderText = "Tổng TT";
+            this.TongTT.Name = "TongTT";
+            this.TongTT.Width = 74;
+            // 
+            // NhaCC
+            // 
+            this.NhaCC.DataPropertyName = "STenNCC";
+            this.NhaCC.HeaderText = "Nhà CC";
+            this.NhaCC.Name = "NhaCC";
+            // 
+            // TenNV
+            // 
+            this.TenNV.DataPropertyName = "STenNV";
+            this.TenNV.HeaderText = "NV Nhập";
+            this.TenNV.Name = "TenNV";
             // 
             // frmQLHDNhap
             // 
@@ -391,14 +396,14 @@
         private System.Windows.Forms.Button btnUpdateHDN;
         private System.Windows.Forms.Button btnUpdateCTHDN;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DG;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ngay;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn NhaCC;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DG;
     }
 }
 

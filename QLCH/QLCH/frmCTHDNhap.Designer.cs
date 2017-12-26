@@ -28,31 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txTongTT = new System.Windows.Forms.TextBox();
+            this.txTongTT2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbNCC = new System.Windows.Forms.ComboBox();
+            this.cbNCC2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dtNgayNhap = new System.Windows.Forms.DateTimePicker();
+            this.dtNgayNhap2 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbNV = new System.Windows.Forms.ComboBox();
+            this.cbNV2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txMaHD = new System.Windows.Forms.TextBox();
+            this.txMaHD2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvCTHDNhap = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCTHDNhap2 = new System.Windows.Forms.DataGridView();
+            this.colTenSP = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colInsDel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCTHDNhap)).BeginInit();
+            this.btnDel_CT = new System.Windows.Forms.Button();
+            this.btnUpdate_CT = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTHDNhap2)).BeginInit();
             this.SuspendLayout();
             // 
-            // txTongTT
+            // txTongTT2
             // 
-            this.txTongTT.Location = new System.Drawing.Point(738, 13);
-            this.txTongTT.Name = "txTongTT";
-            this.txTongTT.Size = new System.Drawing.Size(146, 20);
-            this.txTongTT.TabIndex = 25;
+            this.txTongTT2.Location = new System.Drawing.Point(738, 13);
+            this.txTongTT2.Name = "txTongTT2";
+            this.txTongTT2.Size = new System.Drawing.Size(146, 20);
+            this.txTongTT2.TabIndex = 25;
             // 
             // label7
             // 
@@ -64,13 +67,13 @@
             this.label7.TabIndex = 24;
             this.label7.Text = "Tổng thanh toán: ";
             // 
-            // cbNCC
+            // cbNCC2
             // 
-            this.cbNCC.FormattingEnabled = true;
-            this.cbNCC.Location = new System.Drawing.Point(382, 12);
-            this.cbNCC.Name = "cbNCC";
-            this.cbNCC.Size = new System.Drawing.Size(200, 21);
-            this.cbNCC.TabIndex = 21;
+            this.cbNCC2.FormattingEnabled = true;
+            this.cbNCC2.Location = new System.Drawing.Point(382, 12);
+            this.cbNCC2.Name = "cbNCC2";
+            this.cbNCC2.Size = new System.Drawing.Size(200, 21);
+            this.cbNCC2.TabIndex = 21;
             // 
             // label5
             // 
@@ -81,12 +84,12 @@
             this.label5.TabIndex = 20;
             this.label5.Text = "Nhà CC:";
             // 
-            // dtNgayNhap
+            // dtNgayNhap2
             // 
-            this.dtNgayNhap.Location = new System.Drawing.Point(382, 40);
-            this.dtNgayNhap.Name = "dtNgayNhap";
-            this.dtNgayNhap.Size = new System.Drawing.Size(200, 20);
-            this.dtNgayNhap.TabIndex = 19;
+            this.dtNgayNhap2.Location = new System.Drawing.Point(382, 40);
+            this.dtNgayNhap2.Name = "dtNgayNhap2";
+            this.dtNgayNhap2.Size = new System.Drawing.Size(200, 20);
+            this.dtNgayNhap2.TabIndex = 19;
             // 
             // label4
             // 
@@ -97,13 +100,13 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Ngày nhập:";
             // 
-            // cbNV
+            // cbNV2
             // 
-            this.cbNV.FormattingEnabled = true;
-            this.cbNV.Location = new System.Drawing.Point(66, 37);
-            this.cbNV.Name = "cbNV";
-            this.cbNV.Size = new System.Drawing.Size(210, 21);
-            this.cbNV.TabIndex = 17;
+            this.cbNV2.FormattingEnabled = true;
+            this.cbNV2.Location = new System.Drawing.Point(66, 37);
+            this.cbNV2.Name = "cbNV2";
+            this.cbNV2.Size = new System.Drawing.Size(210, 21);
+            this.cbNV2.TabIndex = 17;
             // 
             // label3
             // 
@@ -114,13 +117,13 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "NV nhập:";
             // 
-            // txMaHD
+            // txMaHD2
             // 
-            this.txMaHD.Location = new System.Drawing.Point(66, 11);
-            this.txMaHD.Name = "txMaHD";
-            this.txMaHD.ReadOnly = true;
-            this.txMaHD.Size = new System.Drawing.Size(210, 20);
-            this.txMaHD.TabIndex = 15;
+            this.txMaHD2.Location = new System.Drawing.Point(66, 11);
+            this.txMaHD2.Name = "txMaHD2";
+            this.txMaHD2.ReadOnly = true;
+            this.txMaHD2.Size = new System.Drawing.Size(210, 20);
+            this.txMaHD2.TabIndex = 15;
             // 
             // label2
             // 
@@ -131,27 +134,32 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Mã HĐ: ";
             // 
-            // dgvCTHDNhap
+            // dgvCTHDNhap2
             // 
-            this.dgvCTHDNhap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCTHDNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
+            this.dgvCTHDNhap2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCTHDNhap2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colTenSP,
             this.SL,
-            this.DG});
-            this.dgvCTHDNhap.Location = new System.Drawing.Point(12, 81);
-            this.dgvCTHDNhap.Name = "dgvCTHDNhap";
-            this.dgvCTHDNhap.Size = new System.Drawing.Size(874, 359);
-            this.dgvCTHDNhap.TabIndex = 26;
+            this.DG,
+            this.colInsDel});
+            this.dgvCTHDNhap2.Location = new System.Drawing.Point(12, 81);
+            this.dgvCTHDNhap2.Name = "dgvCTHDNhap2";
+            this.dgvCTHDNhap2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvCTHDNhap2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCTHDNhap2.Size = new System.Drawing.Size(874, 359);
+            this.dgvCTHDNhap2.TabIndex = 26;
+            this.dgvCTHDNhap2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHDNhap2_CellEndEdit);
             // 
-            // dataGridViewTextBoxColumn2
+            // colTenSP
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "STenSP";
-            this.dataGridViewTextBoxColumn2.FillWeight = 300F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên SP";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.Width = 68;
+            this.colTenSP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colTenSP.DataPropertyName = "STenSP";
+            this.colTenSP.FillWeight = 300F;
+            this.colTenSP.HeaderText = "Tên SP";
+            this.colTenSP.Name = "colTenSP";
+            this.colTenSP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colTenSP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colTenSP.Width = 300;
             // 
             // SL
             // 
@@ -164,6 +172,14 @@
             this.DG.DataPropertyName = "FGiaNhap";
             this.DG.HeaderText = "Giá nhập";
             this.DG.Name = "DG";
+            this.DG.Width = 150;
+            // 
+            // colInsDel
+            // 
+            this.colInsDel.HeaderText = "Xoá";
+            this.colInsDel.Name = "colInsDel";
+            this.colInsDel.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colInsDel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // btnSave
             // 
@@ -175,6 +191,7 @@
             this.btnSave.TabIndex = 27;
             this.btnSave.Text = "Lưu lại";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -184,28 +201,53 @@
             this.btnCancel.TabIndex = 28;
             this.btnCancel.Text = "Huỷ bỏ";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnDel_CT
+            // 
+            this.btnDel_CT.Location = new System.Drawing.Point(647, 456);
+            this.btnDel_CT.Name = "btnDel_CT";
+            this.btnDel_CT.Size = new System.Drawing.Size(75, 35);
+            this.btnDel_CT.TabIndex = 29;
+            this.btnDel_CT.Text = "Xoá các lựa chọn";
+            this.btnDel_CT.UseVisualStyleBackColor = true;
+            this.btnDel_CT.Click += new System.EventHandler(this.btnDel_CT_Click);
+            // 
+            // btnUpdate_CT
+            // 
+            this.btnUpdate_CT.Enabled = false;
+            this.btnUpdate_CT.Location = new System.Drawing.Point(563, 456);
+            this.btnUpdate_CT.Name = "btnUpdate_CT";
+            this.btnUpdate_CT.Size = new System.Drawing.Size(78, 35);
+            this.btnUpdate_CT.TabIndex = 30;
+            this.btnUpdate_CT.Text = "Cập nhật";
+            this.btnUpdate_CT.UseVisualStyleBackColor = true;
+            this.btnUpdate_CT.Click += new System.EventHandler(this.btnUpdate_CT_Click);
             // 
             // frmCTHDNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 503);
+            this.Controls.Add(this.btnUpdate_CT);
+            this.Controls.Add(this.btnDel_CT);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.dgvCTHDNhap);
-            this.Controls.Add(this.txTongTT);
+            this.Controls.Add(this.dgvCTHDNhap2);
+            this.Controls.Add(this.txTongTT2);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cbNCC);
+            this.Controls.Add(this.cbNCC2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dtNgayNhap);
+            this.Controls.Add(this.dtNgayNhap2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cbNV);
+            this.Controls.Add(this.cbNV2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txMaHD);
+            this.Controls.Add(this.txMaHD2);
             this.Controls.Add(this.label2);
             this.Name = "frmCTHDNhap";
             this.Text = "frmCTHDNhap";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCTHDNhap)).EndInit();
+            this.Load += new System.EventHandler(this.frmCTHDNhap_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTHDNhap2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,21 +255,24 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txTongTT;
+        private System.Windows.Forms.TextBox txTongTT2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbNCC;
+        private System.Windows.Forms.ComboBox cbNCC2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dtNgayNhap;
+        private System.Windows.Forms.DateTimePicker dtNgayNhap2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbNV;
+        private System.Windows.Forms.ComboBox cbNV2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txMaHD;
+        private System.Windows.Forms.TextBox txMaHD2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvCTHDNhap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DG;
+        private System.Windows.Forms.DataGridView dgvCTHDNhap2;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colTenSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DG;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colInsDel;
+        private System.Windows.Forms.Button btnDel_CT;
+        private System.Windows.Forms.Button btnUpdate_CT;
     }
 }

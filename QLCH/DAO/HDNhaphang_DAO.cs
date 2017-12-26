@@ -27,6 +27,7 @@ namespace DAO
            List<HDNhaphang_DTO> lsthdn = new List<HDNhaphang_DTO>();
            for(int i = 0; i<dt.Rows.Count;i++)
            {
+               
                HDNhaphang_DTO hdn = new HDNhaphang_DTO();
                hdn.SMaHDN = dt.Rows[i]["MAHDNH"].ToString();
                hdn.SMaNV = dt.Rows[i]["MANV"].ToString();
@@ -34,9 +35,7 @@ namespace DAO
                hdn.SMaNCC = dt.Rows[i]["MANCC"].ToString();
                hdn.STenNCC = dt.Rows[i]["TENNCC"].ToString();
                hdn.DtNgayNhap = DateTime.Parse(dt.Rows[i]["NGAYNH"].ToString());
-               hdn.FTongTien = float.Parse(dt.Rows[i]["TONGTIEN"].ToString());
-              
-              
+               hdn.FTongTien = dt.Rows[i]["TONGTIEN"].ToString();
                lsthdn.Add(hdn);
            }
            DataProvider.Dongketnoi(con);
