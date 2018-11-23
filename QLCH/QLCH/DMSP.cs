@@ -35,19 +35,35 @@ namespace QLCH
             List<Sanpham_DTO> lstSanpham = Sanpham_BUS.LoadSanpham();
 
             dgvdanhmucsp.DataSource = lstSanpham;
+
+            dgvdanhmucsp.Columns["SMaSP"].HeaderText = "Mã SP";
+            dgvdanhmucsp.Columns["STenSP"].HeaderText = "Tên SP";
+            dgvdanhmucsp.Columns["STGBH"].HeaderText = "TG Bảo hành";
+            dgvdanhmucsp.Columns["SSoLuong"].HeaderText = "Số lượng";
+            dgvdanhmucsp.Columns["STrangThai"].HeaderText = "Trạng thái";
+            dgvdanhmucsp.Columns["SDonGia"].HeaderText = "Đơn giá";
+            dgvdanhmucsp.Columns["SMaLoai"].HeaderText = "Mã loại";
+            dgvdanhmucsp.Columns["SMaNCC"].HeaderText = "Mã NCC";
+
+            dgvdanhmucsp.Columns["SMaSP"].Width = 50;
+            dgvdanhmucsp.Columns["STGBH"].Width = 50;
+            dgvdanhmucsp.Columns["SSoLuong"].Width = 50;
         }
 
         private void bntimkiem_Click(object sender, EventArgs e)
         {
             string sTukhoa = txttukhoa.Text;
-            List<Sanpham_DTO> lstkqsp = Sanpham_BUS.Timkiemsp(sTukhoa);
-            if(lstkqsp.Count == 0)
-            {
-                MessageBox.Show("Khong co san pham can tim!");
+            DataTable tbl = new DataTable();
+            tbl = Sanpham_BUS.Timkiemsp(sTukhoa);
+            //List<Sanpham_DTO> lstkqsp = new List<Sanpham_DTO>();
+            //lstkqsp = Sanpham_BUS.Timkiemsp(sTukhoa);
+            
+                dgvdanhmucsp.DataSource = tbl;
 
-            }
-            else
-                dgvdanhmucsp.DataSource = lstkqsp;
+
+            //DataTable tblSanpham = Sanpham_BUS.Timkiemsp(txttukhoa.Text);
+            //dgvdanhmucsp.DataSource = tblSanpham;
+            
 
         }
 
@@ -67,7 +83,7 @@ namespace QLCH
         private void btlsptinhtrang_Click(object sender, EventArgs e)
         {
             string sTukhoa = cblsptinhtrang.Text;
-            MessageBox.Show(sTukhoa);
+            //MessageBox.Show(sTukhoa);
             List<Sanpham_DTO> lstkqsp = Sanpham_BUS.Locsptt(sTukhoa);
             try
             {
@@ -79,6 +95,24 @@ namespace QLCH
                 MessageBox.Show("Khong co san pham can tim!");
             }
             
+        }
+
+        private void cblsptinhtrang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cblsp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txttukhoa_TextChanged(object sender, EventArgs e)
+        {
+
+            //DataTable tblSanpham = Sanpham_BUS.Timkiemsp(txttukhoa.Text);
+            //dgvdanhmucsp.DataSource = tblSanpham;
+
         }
     }
 }

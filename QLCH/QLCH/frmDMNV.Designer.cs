@@ -82,8 +82,10 @@
             this.Controls.Add(this.dgvLocNV);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDMNV";
             this.Text = "Danh mục nhân viên";
+            this.Load += new System.EventHandler(this.frmDMNV_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocNV)).EndInit();

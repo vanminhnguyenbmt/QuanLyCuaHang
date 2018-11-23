@@ -44,10 +44,6 @@ namespace QLCH
 
         private void LoadDgvNhanvien()
         {
-<<<<<<< HEAD
-            List<Nhanvien_DTO> lstNhanvien = Nhanvien_BUS.LoadNhanvien();
-            dgvLoadNV.DataSource = lstNhanvien;
-=======
             DataTable tblNhanvien = Nhanvien_BUS.LoadNhanvien();
             dgvLoadNV.DataSource = tblNhanvien;
             //rename
@@ -93,6 +89,7 @@ namespace QLCH
             Reset();
             btnCapNhat.Enabled = false;
             btnXoa.Enabled = false;
+            btnLuu.Enabled = true;
         }
 
         private void cbbChucvu_SelectedIndexChanged(object sender, EventArgs e)
@@ -146,7 +143,7 @@ namespace QLCH
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            XoaNV(sender, e);
+            XoaNV();
         }
 
         private void dgvLoadNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -170,6 +167,7 @@ namespace QLCH
             cbbChucvu.SelectedValue = dr.Cells["MALOAI"].Value.ToString();
             dtpNgaysinh.Text = dr.Cells["NGSINH"].Value.ToString();
             ChangeState(false);
+            btnLuu.Enabled = false;
         }
 
         private void Reset()
@@ -202,30 +200,37 @@ namespace QLCH
         {
             StateButton = 2;
             ChangeState(true);
+            btnLuu.Enabled = true;
         }
 
-        private void ThemNV(object sender, EventArgs e)
+        private void LayTTNV(Nhanvien_DTO NV)
         {
+            NV.SMaNV = txtMaNV.Text;
+            NV.STenNV = txtHoten.Text;
+            NV.SGioitinh = "";
+            if (cbbGioitinh.SelectedIndex == 0)
+            {
+                NV.SGioitinh = "NAM";
+            }
+            else
+                NV.SGioitinh = "NỮ";
+            NV.SDiachi = txtDiachi.Text;
+            NV.SSDT = txtSDT.Text;
+            NV.SMaLoai = cbbChucvu.SelectedValue.ToString();
+            NV.DTNgaysinh = dtpNgaysinh.Value.Date;
+        }
+
+        private void ThemNV()
+        {
+            Nhanvien_DTO NV = new Nhanvien_DTO();
             txtMaNV.Text = TuDongTangMaNV();
+            LayTTNV(NV);
             if (txtHoten.Text == "" || txtDiachi.Text == "" || txtSDT.Text == "")
             {
                 MessageBox.Show("Mời bạn nhập đầy đủ thông tin!", "Thông báo");
             }
             else
             {
-                string sMaNV = txtMaNV.Text;
-                string sTenNV = txtHoten.Text;
-                string sGioitinh = "";
-                if (cbbGioitinh.SelectedIndex == 0)
-                {
-                    sGioitinh = "NAM";
-                }
-                else
-                    sGioitinh = "NỮ";
-                string sDiachi = txtDiachi.Text;
-                string sSDT = txtSDT.Text;
-                string sMaloai = cbbChucvu.SelectedValue.ToString();
-                DateTime dtNgaysinh = dtpNgaysinh.Value.Date;
                 if (DateTime.Now.Year - dtpNgaysinh.Value.Year <= 18)
                     MessageBox.Show("Nhân viên không đủ tuổi.");
                 else
@@ -236,9 +241,11 @@ namespace QLCH
                     {
                         try
                         {
-                            Nhanvien_BUS.ThemNV(sMaNV, sTenNV, dtNgaysinh, sGioitinh, sDiachi, sSDT, sMaloai);
-                            frmQLNV_Load(sender, e);
+                            Nhanvien_BUS.ThemNV(NV);
+                            ChangeState(false);
+                            LoadDgvNhanvien();
                             Reset();
+                            btnLuu.Enabled = false;
                         }
                         catch (Exception ex)
                         {
@@ -249,8 +256,9 @@ namespace QLCH
             }
         }
 
-        private void CapNhatNV(object sender, EventArgs e)
+        private void CapNhatNV()
         {
+            Nhanvien_DTO NV = new Nhanvien_DTO();
             DialogResult Lenh = MessageBox.Show("Bạn chắc chắn muốn cập nhật thông tin nhân viên nhân viên!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (Lenh == DialogResult.Yes)
             {
@@ -260,19 +268,7 @@ namespace QLCH
                 }
                 else
                 {
-                    string sMaNV = txtMaNV.Text;
-                    string sTenNV = txtHoten.Text;
-                    string sGioitinh = "";
-                    if (cbbGioitinh.SelectedIndex == 0)
-                    {
-                        sGioitinh = "NAM";
-                    }
-                    else
-                        sGioitinh = "NỮ";
-                    string sDiachi = txtDiachi.Text;
-                    string sSDT = txtSDT.Text;
-                    string sMaloai = cbbChucvu.SelectedValue.ToString();
-                    DateTime dtNgaysinh = dtpNgaysinh.Value.Date;
+                    LayTTNV(NV);
                     if (DateTime.Now.Year - dtpNgaysinh.Value.Year <= 18)
                         MessageBox.Show("Nhân viên không đủ tuổi.");
                     else
@@ -283,11 +279,13 @@ namespace QLCH
                         {
                             try
                             {
-                                Nhanvien_BUS.CapNhatNV(sMaNV, sTenNV, dtNgaysinh, sGioitinh, sDiachi, sSDT, sMaloai);
-                                frmQLNV_Load(sender, e);
+                                Nhanvien_BUS.CapNhatNV(NV);
+                                ChangeState(false);
+                                LoadDgvNhanvien();
                                 Reset();
                                 btnCapNhat.Enabled = false;
                                 btnXoa.Enabled = false;
+                                btnLuu.Enabled = false;
                             }
                             catch (Exception ex)
                             {
@@ -299,13 +297,15 @@ namespace QLCH
             }
         }
 
-        private void XoaNV(object sender, EventArgs e)
+        private void XoaNV()
         {
             DialogResult Lenh = MessageBox.Show("Bạn chắc chắn muốn xóa nhân viên!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (Lenh == DialogResult.Yes)
             {
                 Nhanvien_BUS.XoaNV(txtMaNV.Text);
-                frmQLNV_Load(sender, e);
+                Nhanvien_BUS.XoaTKNV(txtMaNV.Text);
+                ChangeState(false);
+                LoadDgvNhanvien();
                 Reset();
                 btnCapNhat.Enabled = false;
                 btnXoa.Enabled = false;
@@ -317,13 +317,17 @@ namespace QLCH
             switch (StateButton)
             {
                 case 1:
-                    ThemNV(sender,e);
+                    ThemNV();
                     break;
                 case 2:
-                    CapNhatNV(sender, e);
+                    CapNhatNV();
                     break;
             }
->>>>>>> Thien_conflict
+        }
+
+        private void cbbChucvu_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

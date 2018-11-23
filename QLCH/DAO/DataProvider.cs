@@ -8,13 +8,13 @@ using System.Data;
 
 namespace DAO
 {
-    class DataProvider
+    public class DataProvider
     {
         //ket noi
 
         public static SqlConnection Ketnoi()
         {
-            string sChuoiketnoi = @"Data Source=DESKTOP-JCFB32G\SQLEXPRESS;Initial Catalog=QLLKMT;Integrated Security=True";
+            string sChuoiketnoi = @"Data Source=THIEN-PC;Initial Catalog=QLLKMT;Integrated Security=True";
             SqlConnection con = new SqlConnection(sChuoiketnoi);
             con.Open();
             return con;
@@ -35,7 +35,7 @@ namespace DAO
             da.Fill(dt);
             return dt;
         }
-        
+
         //thuc thi truy van
         public static bool ThucThiTruyVanNonQuerry(string sTruyvan, SqlConnection con)
         {
@@ -45,10 +45,35 @@ namespace DAO
                 com.ExecuteNonQuery();
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return false;
             }
+        }
+
+        public static DataTable GetDataTable(String nameproc, SqlConnection con)
+        {
+            var cmd = new SqlCommand(nameproc, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            var dap = new SqlDataAdapter(cmd);
+            var dt = new DataTable();
+            dap.Fill(dt);
+            return dt;
+        }
+        public static DataTable GetDataTableWithParam(SqlCommand cmd, SqlConnection con)
+        {
+            cmd.CommandType = CommandType.StoredProcedure;
+            var dap = new SqlDataAdapter(cmd);
+            var dt = new DataTable();
+            dap.Fill(dt);
+            return dt;
+        }
+        public static void RunSQuerryWithParam(SqlCommand cmd, SqlConnection con)
+        {
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.ExecuteNonQuery();
+
         }
     }
 }

@@ -32,29 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>bin\x64\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,18 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="DMSP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DMSP.Designer.cs">
-      <DependentUpon>DMSP.cs</DependentUpon>
-=======
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
->>>>>>> Thien_conflict
+    </Compile>
+    <Compile Include="DMSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMSP.designer.cs">
+      <DependentUpon>DMSP.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -85,11 +66,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCTHDBH.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCTHDBH.Designer.cs">
       <DependentUpon>frmCTHDBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCTHDNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCTHDNhap.designer.cs">
+      <DependentUpon>frmCTHDNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDMHDNH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDMHDNH.designer.cs">
+      <DependentUpon>frmDMHDNH.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDMNV.cs">
       <SubType>Form</SubType>
@@ -97,11 +96,23 @@
     <Compile Include="frmDMNV.Designer.cs">
       <DependentUpon>frmDMNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQLBH.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmQLBH.Designer.cs">
       <DependentUpon>frmQLBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLHDNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLHDNhap.designer.cs">
+      <DependentUpon>frmQLHDNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="frmQLNV.cs">
       <SubType>Form</SubType>
@@ -111,6 +122,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="QLLKMTDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -119,7 +135,7 @@
     <Compile Include="QLNCC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLNCC.Designer.cs">
+    <Compile Include="QLNCC.designer.cs">
       <DependentUpon>QLNCC.cs</DependentUpon>
     </Compile>
     <Compile Include="QLSP.cs">
@@ -128,38 +144,78 @@
     <Compile Include="QLSP.Designer.cs">
       <DependentUpon>QLSP.cs</DependentUpon>
     </Compile>
+    <Compile Include="rpHDBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpHDBH.Designer.cs">
+      <DependentUpon>rpHDBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPHoaDonBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPHoaDonBanHang.Designer.cs">
+      <DependentUpon>RPHoaDonBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucQLTK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucQLTK.Designer.cs">
+      <DependentUpon>ucQLTK.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DMSP.resx">
       <DependentUpon>DMSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCTHDBH.resx">
       <DependentUpon>frmCTHDBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCTHDNhap.resx">
+      <DependentUpon>frmCTHDNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDMHDNH.resx">
+      <DependentUpon>frmDMHDNH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDMNV.resx">
       <DependentUpon>frmDMNV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQLBH.resx">
       <DependentUpon>frmQLBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLHDNhap.resx">
+      <DependentUpon>frmQLHDNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLNV.resx">
       <DependentUpon>frmQLNV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InHoaDonBanHang.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="QLNCC.resx">
       <DependentUpon>QLNCC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLSP.resx">
       <DependentUpon>QLSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpHDBH.rdlc" />
+    <EmbeddedResource Include="rpHDBH.resx">
+      <DependentUpon>rpHDBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPHoaDonBanHang.resx">
+      <DependentUpon>RPHoaDonBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucQLTK.resx">
+      <DependentUpon>ucQLTK.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
@@ -200,6 +256,10 @@
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{56c971e1-4674-411b-bc98-6959d3505e81}</Project>
       <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{0375d060-1ef4-4319-83db-3711084bedfe}</Project>
+      <Name>DAO</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{8d8a5714-14a5-4992-a378-b49625a01181}</Project>

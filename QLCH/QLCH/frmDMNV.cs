@@ -82,7 +82,8 @@ namespace QLCH
                 //set width
                 dgvLocNV.Columns["GIOITINH"].Width = 70;
                 dgvLocNV.Columns["TENNV"].Width = 150;
-                dgvLocNV.Columns["NGSINH"].Width = 80;
+                dgvLocNV.Columns["NGSINH"].Width = 100;
+                dgvLocNV.Columns["TENLOAI"].Width = 140;
             }
         }
 
@@ -108,8 +109,14 @@ namespace QLCH
                 //set width
                 dgvLocNV.Columns["GIOITINH"].Width = 70;
                 dgvLocNV.Columns["TENNV"].Width = 150;
-                dgvLocNV.Columns["NGSINH"].Width = 80;
+                dgvLocNV.Columns["NGSINH"].Width = 100;
+                dgvLocNV.Columns["TENLOAI"].Width = 140;
             }
+        }
+
+        private void frmDMNV_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -27,5 +27,22 @@ namespace BUS
                 MaNCC = kyTuDau + soCanTang;
             return MaNCC;
         }
+
+        public static bool Themncc(Nhacungcap_DTO ThemNCC)
+        {
+            return Nhacungcap_DAO.ThemNCC(ThemNCC);
+        }
+
+        public static bool Suancc(Nhacungcap_DTO SuaNCC)
+        {
+            return Nhacungcap_DAO.SuaNCC(SuaNCC);
+        }
+
+        public static bool Xoancc(Nhacungcap_DTO XoaNCC)
+        {
+            return Nhacungcap_DAO.XoaNCC(XoaNCC);
+        }
+
+
     }
 }

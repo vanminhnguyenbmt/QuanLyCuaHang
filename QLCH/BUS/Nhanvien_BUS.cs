@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 using System.Threading.Tasks;
 using DTO;
 using DAO;
@@ -11,7 +12,7 @@ namespace BUS
     public class Nhanvien_BUS
     {
         //load nhan vien
-        public static List<Nhanvien_DTO> LoadNhanvien()
+        public static DataTable LoadNhanvien()
         {
             return Nhanvien_DAO.LoadNhanVien(); 
         }
@@ -28,9 +29,9 @@ namespace BUS
             return Nhanvien_DAO.LoadTenNhanVien();
         }
         //them nhan vien
-        public static void ThemNV(string sMaNV, string sHoten, DateTime dtNgaysinh, string sGioitinh, string sDiachi, string sSDT, string sMaloai)
+        public static void ThemNV(Nhanvien_DTO NV)
         {
-            Nhanvien_DAO.ThemNV(sMaNV, sHoten, dtNgaysinh, sGioitinh, sDiachi, sSDT, sMaloai);
+            Nhanvien_DAO.ThemNV(NV);
         }
         //xoa nhan vien
         public static void XoaNV(string sMaNV)
@@ -38,9 +39,9 @@ namespace BUS
             Nhanvien_DAO.XoaNV(sMaNV);
         }
         //cap nhat nhan vien
-        public static void CapNhatNV(string sMaNV, string sHoten, DateTime dtNgaysinh, string sGioitinh, string sDiachi, string sSDT, string sMaloai)
+        public static void CapNhatNV(Nhanvien_DTO NV)
         {
-            Nhanvien_DAO.CapNhatNV(sMaNV, sHoten, dtNgaysinh, sGioitinh, sDiachi, sSDT, sMaloai);
+            Nhanvien_DAO.CapNhatNV(NV);
         }
         //tim kiem nhan vien
         public static DataTable TimkiemNV(string sChuoi)
@@ -51,6 +52,11 @@ namespace BUS
         public static DataTable LoadMaNV(string sTenNV)
         {
             return Nhanvien_DAO.LoadMaNV(sTenNV);
+        }
+        //Xoa tk nhan vien
+        public static void XoaTKNV(string sMaNV)
+        {
+            Nhanvien_DAO.XoaTKNV(sMaNV);
         }
     }
 }

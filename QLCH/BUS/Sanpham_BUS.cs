@@ -59,9 +59,19 @@ namespace BUS
         {
             return Sanpham_DAO.XoaSP(XoaSP);
         }
-        public static List<Sanpham_DTO> Timkiemsp(string Tukhoa)
+        //public static List<Sanpham_DTO> Timkiemsp(string Tukhoa)
+        //{
+        //    return Sanpham_DAO.TimkiemSP(Tukhoa);
+        //}
+
+        public static DataTable Timkiemsp(string kytu)
         {
-            return Sanpham_DAO.TimkiemSP(Tukhoa);
+            return Sanpham_DAO.TimkiemSP(kytu);
+        }
+
+        public static bool Checkxoasp(string kytu)
+        {
+            return Sanpham_DAO.CheckXoaSP(kytu);
         }
 
         public static List<Sanpham_DTO> Locsp(string Tukhoa)

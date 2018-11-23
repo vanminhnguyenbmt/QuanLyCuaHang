@@ -32,12 +32,12 @@ namespace DTO
             set { dtNgaysinh = value; }
         }
 
-        private int iGioitinh;
+        private string sGioitinh;
 
-        public int IGioitinh
+        public string SGioitinh
         {
-            get { return iGioitinh; }
-            set { iGioitinh = value; }
+            get { return sGioitinh; }
+            set { sGioitinh = value; }
         }
 
         private string sDiachi;

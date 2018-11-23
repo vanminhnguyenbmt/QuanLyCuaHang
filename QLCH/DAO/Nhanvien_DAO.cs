@@ -14,31 +14,9 @@ namespace DAO
     {
         static SqlConnection con;
         //load nhan vien
-        public static List<Nhanvien_DTO> LoadNhanVien()
+        public static DataTable LoadNhanVien()
         {
-            string sTruyvan = "select * from NHANVIEN";
             con = DataProvider.Ketnoi();
-<<<<<<< HEAD
-            DataTable dt = DataProvider.LayDataTable(sTruyvan, con);
-            if(dt.Rows.Count==0)
-            {
-                return null;
-            }
-            List<Nhanvien_DTO> listnv = new List<Nhanvien_DTO>();
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                Nhanvien_DTO nv = new Nhanvien_DTO();
-                nv.SMaNV = dt.Rows[i]["MANV"].ToString();
-                nv.STenNV = dt.Rows[i]["TENNV"].ToString();
-                nv.DTNgaysinh = DateTime.Parse(dt.Rows[i]["NGSINH"].ToString());
-                nv.IGioitinh = Int32.Parse(dt.Rows[i]["GIOITINH"].ToString());
-                nv.SDiachi = dt.Rows[i]["DIACHI"].ToString();
-                nv.SSDT = dt.Rows[i]["SDT"].ToString();
-                nv.SMaLoai = dt.Rows[i]["MALOAI"].ToString();
-                listnv.Add(nv);
-            }
-            return listnv;
-=======
             var cmd = new SqlCommand("Nhanvien_Load", con);
             cmd.CommandType = CommandType.StoredProcedure;
             var Adapter = new SqlDataAdapter(cmd);
@@ -46,7 +24,6 @@ namespace DAO
             Adapter.Fill(table);
             DataProvider.Dongketnoi(con);
             return table;
->>>>>>> Thien_conflict
         }
         //load ten nv
         public static DataTable LoadTenNhanVien()
@@ -74,18 +51,18 @@ namespace DAO
             return table;
         }
 
-        public static void ThemNV(string sMaNV, string sHoten, DateTime dtNgaysinh, string sGioitinh, string sDiachi, string sSDT, string sMaloai)
+        public static void ThemNV(Nhanvien_DTO NV)
         {
             con = DataProvider.Ketnoi();
             var cmd = new SqlCommand("Nhanvien_Insert", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@MANV", SqlDbType.Char).Value = sMaNV;
-            cmd.Parameters.Add("@TENNV", SqlDbType.NVarChar).Value = sHoten; ;
-            cmd.Parameters.Add("@NGSINH", SqlDbType.SmallDateTime).Value = dtNgaysinh; ;
-            cmd.Parameters.Add("@GIOITINH", SqlDbType.NVarChar).Value = sGioitinh; ;
-            cmd.Parameters.Add("@DIACHI", SqlDbType.NVarChar).Value = sDiachi; ;
-            cmd.Parameters.Add("@SDT", SqlDbType.NVarChar).Value = sSDT; ;
-            cmd.Parameters.Add("@MALOAI", SqlDbType.Char).Value = sMaloai; ;
+            cmd.Parameters.Add("@MANV", SqlDbType.Char).Value = NV.SMaNV;
+            cmd.Parameters.Add("@TENNV", SqlDbType.NVarChar).Value = NV.STenNV; ;
+            cmd.Parameters.Add("@NGSINH", SqlDbType.SmallDateTime).Value = NV.DTNgaysinh; ;
+            cmd.Parameters.Add("@GIOITINH", SqlDbType.NVarChar).Value = NV.SGioitinh; ;
+            cmd.Parameters.Add("@DIACHI", SqlDbType.NVarChar).Value = NV.SDiachi; ;
+            cmd.Parameters.Add("@SDT", SqlDbType.NVarChar).Value = NV.SSDT; ;
+            cmd.Parameters.Add("@MALOAI", SqlDbType.Char).Value = NV.SMaLoai; ;
             cmd.ExecuteNonQuery();
             DataProvider.Dongketnoi(con);
         }
@@ -100,18 +77,18 @@ namespace DAO
             DataProvider.Dongketnoi(con);
         }
 
-        public static void CapNhatNV(string sMaNV, string sHoten, DateTime dtNgaysinh, string sGioitinh, string sDiachi, string sSDT, string sMaloai)
+        public static void CapNhatNV(Nhanvien_DTO NV)
         {
             con = DataProvider.Ketnoi();
             var cmd = new SqlCommand("Nhanvien_Update", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@MANV", SqlDbType.Char).Value = sMaNV;
-            cmd.Parameters.Add("@TENNV", SqlDbType.NVarChar).Value = sHoten; ;
-            cmd.Parameters.Add("@NGSINH", SqlDbType.SmallDateTime).Value = dtNgaysinh; ;
-            cmd.Parameters.Add("@GIOITINH", SqlDbType.NVarChar).Value = sGioitinh; ;
-            cmd.Parameters.Add("@DIACHI", SqlDbType.NVarChar).Value = sDiachi; ;
-            cmd.Parameters.Add("@SDT", SqlDbType.NVarChar).Value = sSDT; ;
-            cmd.Parameters.Add("@MALOAI", SqlDbType.Char).Value = sMaloai; ;
+            cmd.Parameters.Add("@MANV", SqlDbType.Char).Value = NV.SMaNV;
+            cmd.Parameters.Add("@TENNV", SqlDbType.NVarChar).Value = NV.STenNV; ;
+            cmd.Parameters.Add("@NGSINH", SqlDbType.SmallDateTime).Value = NV.DTNgaysinh; ;
+            cmd.Parameters.Add("@GIOITINH", SqlDbType.NVarChar).Value = NV.SGioitinh; ;
+            cmd.Parameters.Add("@DIACHI", SqlDbType.NVarChar).Value = NV.SDiachi; ;
+            cmd.Parameters.Add("@SDT", SqlDbType.NVarChar).Value = NV.SSDT; ;
+            cmd.Parameters.Add("@MALOAI", SqlDbType.Char).Value = NV.SMaLoai; ;
             cmd.ExecuteNonQuery();
             DataProvider.Dongketnoi(con);
         }
@@ -142,6 +119,16 @@ namespace DAO
             DataProvider.Dongketnoi(con);
             DataProvider.Dongketnoi(con);
             return table;
+        }
+
+        public static void XoaTKNV(string sMaNV)
+        {
+            con = DataProvider.Ketnoi();
+            var cmd = new SqlCommand("TKNHANVIEN_DeleteMaNV", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@MANV", SqlDbType.Char).Value = sMaNV;
+            cmd.ExecuteNonQuery();
+            DataProvider.Dongketnoi(con);
         }
 
     }

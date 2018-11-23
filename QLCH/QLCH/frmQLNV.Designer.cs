@@ -95,6 +95,7 @@
             this.cbbChucvu.Name = "cbbChucvu";
             this.cbbChucvu.Size = new System.Drawing.Size(200, 21);
             this.cbbChucvu.TabIndex = 13;
+            this.cbbChucvu.SelectedIndexChanged += new System.EventHandler(this.cbbChucvu_SelectedIndexChanged_1);
             // 
             // label8
             // 
@@ -147,6 +148,7 @@
             // 
             // txtMaNV
             // 
+            this.txtMaNV.Enabled = false;
             this.txtMaNV.Location = new System.Drawing.Point(153, 31);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.ReadOnly = true;
@@ -263,6 +265,7 @@
             // 
             // btnLuu
             // 
+            this.btnLuu.Enabled = false;
             this.btnLuu.Location = new System.Drawing.Point(516, 336);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
@@ -284,6 +287,7 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.grbxThongtin);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmQLNV";
             this.Text = "Quản lý nhân viên";
             this.Load += new System.EventHandler(this.frmQLNV_Load);

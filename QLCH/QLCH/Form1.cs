@@ -7,19 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DTO;
-
-
-
 
 namespace QLCH
 {
     public partial class frmMain : Form
     {
+        string sMaLoai = "", sTenLoai = "", sUserName = "", sPassWord = "";
         public frmMain()
         {
             InitializeComponent();
             
+        }
+        public frmMain(string sMaLoai, string sTenLoai, string sUserName, string sPassWord)
+        {
+            InitializeComponent();
+            this.sMaLoai = sMaLoai;
+            this.sTenLoai = sTenLoai;
+            this.sUserName = sUserName;
+            this.sPassWord = sPassWord;
+            if(sTenLoai == "KINH DOANH")
+            {
+                btnQLNCC.Enabled = false;
+                btnQLNV.Enabled = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,29 +53,24 @@ namespace QLCH
             frmQLHDB.Show();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Activate();
+            frmLogin.Show();
+            this.Enabled = false;
+        }
+
+        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void frmMain_Load(object sender, EventArgs e)
         {
 
         }
 
-<<<<<<< HEAD
-        private void button12_Click(object sender, EventArgs e)
-        {
-            QLSP f = new QLSP();
-            f.Show();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            DMSP dmsp = new DMSP();
-            dmsp.Show();
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            QLNCC qlncc = new QLNCC();
-            qlncc.Show();
-=======
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             
@@ -75,7 +80,6 @@ namespace QLCH
         {
             frmQLNV frm = new frmQLNV();
             frm.Show();
->>>>>>> Thien_conflict
         }
     }
 }

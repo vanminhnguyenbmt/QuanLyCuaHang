@@ -16,11 +16,7 @@ namespace QLCH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new frmMain());
-=======
-            Application.Run(new frmQLBH());
->>>>>>> Thien_conflict
+            Application.Run(new frmLogin());
         }
     }
 }
